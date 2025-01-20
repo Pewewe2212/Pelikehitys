@@ -1,0 +1,28 @@
+C:\School stuff\Extra_C#\teht1 Ovi\bin\Debug\net8.0\teht1 Ovi.exe
+C:\School stuff\Extra_C#\teht1 Ovi\bin\Debug\net8.0\teht1 Ovi.deps.json
+C:\School stuff\Extra_C#\teht1 Ovi\bin\Debug\net8.0\teht1 Ovi.runtimeconfig.json
+C:\School stuff\Extra_C#\teht1 Ovi\bin\Debug\net8.0\teht1 Ovi.dll
+C:\School stuff\Extra_C#\teht1 Ovi\bin\Debug\net8.0\teht1 Ovi.pdb
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.GeneratedMSBuildEditorConfig.editorconfig
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.AssemblyInfoInputs.cache
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.AssemblyInfo.cs
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.csproj.CoreCompileInputs.cache
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.dll
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\refint\teht1 Ovi.dll
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.pdb
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\teht1 Ovi.genruntimeconfig.cache
+C:\School stuff\Extra_C#\teht1 Ovi\obj\Debug\net8.0\ref\teht1 Ovi.dll
+C:\Tiedostot\Ovi\bin\Debug\net8.0\teht1 Ovi.exe
+C:\Tiedostot\Ovi\bin\Debug\net8.0\teht1 Ovi.deps.json
+C:\Tiedostot\Ovi\bin\Debug\net8.0\teht1 Ovi.runtimeconfig.json
+C:\Tiedostot\Ovi\bin\Debug\net8.0\teht1 Ovi.dll
+C:\Tiedostot\Ovi\bin\Debug\net8.0\teht1 Ovi.pdb
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.AssemblyInfoInputs.cache
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.AssemblyInfo.cs
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.csproj.CoreCompileInputs.cache
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.dll
+C:\Tiedostot\Ovi\obj\Debug\net8.0\refint\teht1 Ovi.dll
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.pdb
+C:\Tiedostot\Ovi\obj\Debug\net8.0\teht1 Ovi.genruntimeconfig.cache
+C:\Tiedostot\Ovi\obj\Debug\net8.0\ref\teht1 Ovi.dll
