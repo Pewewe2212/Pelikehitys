@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ovi\\teht1 Ovi.csproj": {}
+    "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ruoka-annos generaattori\\Ruoka-annos generaattori\\Ruoka-annos generaattori.csproj": {}
   },
   "projects": {
-    "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ovi\\teht1 Ovi.csproj": {
+    "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ruoka-annos generaattori\\Ruoka-annos generaattori\\Ruoka-annos generaattori.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ovi\\teht1 Ovi.csproj",
-        "projectName": "teht1 Ovi",
-        "projectPath": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ovi\\teht1 Ovi.csproj",
+        "projectUniqueName": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ruoka-annos generaattori\\Ruoka-annos generaattori\\Ruoka-annos generaattori.csproj",
+        "projectName": "Ruoka-annos generaattori",
+        "projectPath": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ruoka-annos generaattori\\Ruoka-annos generaattori\\Ruoka-annos generaattori.csproj",
         "packagesPath": "C:\\Users\\s2300941\\.nuget\\packages\\",
-        "outputPath": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ovi\\obj\\",
+        "outputPath": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\Ruoka-annos generaattori\\Ruoka-annos generaattori\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\s2300941\\AppData\\Roaming\\NuGet\\NuGet.Config",
