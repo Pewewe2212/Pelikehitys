@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Numerics;
 
 namespace ConsoleApp1
 {
@@ -47,66 +47,94 @@ namespace ConsoleApp1
             {
                 get { return (byte)Tail.kotkansulka; }
             }
-
-
         }
 
-
+        
 
         static void Main(string[] args)
         {
-            float total = 0;
+            Console.WriteLine("Haluatko valmis nuolen vai tehdä oman? (valmis, oman)");
+            string choice = Console.ReadLine().ToLower();
 
-            Console.WriteLine("Minkälainen kärki? (puu, teräs, timantti)");
-            string tipChange = Console.ReadLine();
-            Head pää = Enum.Parse<Head>(tipChange.ToLower());
-
-            Console.WriteLine("Minkälaiset sulat? (lehti, kanansulka, kotkansulka)");
-            string tailChange = Console.ReadLine();
-            Tail tail = Enum.Parse<Tail>(tailChange.ToLower());
-
-            int Price(Head head)
+            if (choice == "valmis")
             {
-                return head switch
-                {
-                    Head.puu => 3,
-                    Head.teräs => 5,
-                    Head.timantti => 50,
-                    _ => 0,
-                };
-            }
+                Console.WriteLine("Eliittinuoli: Timanttikärki, 100 cm varsi ja Kotkansulka");
+                Console.WriteLine("Aloittelijanuoli: Puukäkri, 70 cm varsi ja Kanansulka");
+                Console.WriteLine("Perusnuoli: Teräskärki, 85 cm varsi ja Kanansulka");
 
-            int Price2(Tail tail)
-            {
-                return tail switch
-                {
-                    Tail.lehti => 0,
-                    Tail.kanansulka => 1,
-                    Tail.kotkansulka => 5,
-                    _ => 0,
-                };
-            }
+                float total2 = 0;
 
-            total += Price(pää);
-            total += Price2(tail);
+                string arrowChoice = Console.ReadLine(); 
 
-            while (true)
-            {
-                Console.WriteLine("Kuinka pitkä varsi? (60-100)");
-                float price = Single.Parse(Console.ReadLine());
-                if (price < 101 && price > 59)
+                if (arrowChoice.ToLower() == "eliittinuoli")
                 {
-                    total += price * 0.05f;
-                    break;
+                    total2 = 60;
                 }
-                else
+                if (arrowChoice.ToLower() == "aloittelijanuoli")
                 {
-                    Console.WriteLine("Did not understand");
+                    total2 = 1 + 70*0.05f + 1;
                 }
+                if (arrowChoice.ToLower() == "perusnuoli")
+                {
+                    total2 = 5 + 85 * 0.05f + 1; ;
+                }
+
+                Console.WriteLine($"Nuolen hinta on {total2}");
             }
+            else if (choice == "oman")
+            {
+                float total = 0;
 
-            Console.WriteLine($"Nuolen hinta on {total}");
+                Console.WriteLine("Minkälainen kärki? (puu, teräs, timantti)");
+                string tipChange = Console.ReadLine();
+                Head pää = Enum.Parse<Head>(tipChange.ToLower());
 
+                Console.WriteLine("Minkälaiset sulat? (lehti, kanansulka, kotkansulka)");
+                string tailChange = Console.ReadLine();
+                Tail tail = Enum.Parse<Tail>(tailChange.ToLower());
+
+                int Price(Head head)
+                {
+                    return head switch
+                    {
+                        Head.puu => 3,
+                        Head.teräs => 5,
+                        Head.timantti => 50,
+                        _ => 0,
+                    };
+                }
+
+                int Price2(Tail tail)
+                {
+                    return tail switch
+                    {
+                        Tail.lehti => 0,
+                        Tail.kanansulka => 1,
+                        Tail.kotkansulka => 5,
+                        _ => 0,
+                    };
+                }
+
+                total += Price(pää);
+                total += Price2(tail);
+
+                while (true)
+                {
+                    Console.WriteLine("Kuinka pitkä varsi? (60-100)");
+                    float price = Single.Parse(Console.ReadLine());
+                    if (price < 101 && price > 59)
+                    {
+                        total += price * 0.05f;
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Did not understand");
+                    }
+                }
+
+                Console.WriteLine($"Nuolen hinta on {total}");
+            }
         }
     }
 }
