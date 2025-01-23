@@ -1,76 +1,100 @@
-﻿namespace ConsoleApp1
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
+        private enum Head : byte
+        {
+            puu,
+            teräs,
+            timantti,
+        }
+
+        private enum Tail : byte
+        {
+            lehti,
+            kanansulka,
+            kotkansulka,
+        }
+
+
+        internal class Arrow()
+        {
+            // gets head
+            public byte headPuu
+            {
+                get { return (byte)Head.puu; }
+            }
+            public byte headTeräs
+            {
+                get { return (byte)Head.teräs; }
+            }
+            public byte headTimantti
+            {
+                get { return (byte)Head.timantti; }
+            }
+
+            public byte tailLehti
+            {
+                get { return (byte)Tail.lehti; }
+            }
+            public byte tailKana
+            {
+                get { return (byte)Tail.kanansulka; }
+            }
+            public byte tailKotka
+            {
+                get { return (byte)Tail.kotkansulka; }
+            }
+
+
+        }
+
+
+
         static void Main(string[] args)
         {
             float total = 0;
-            List<float> head = new List<float>();
-            head.Add(3);
-            head.Add(5);
-            head.Add(50);
 
-            List<float> feather = new List<float>();
-            feather.Add(0);
-            feather.Add(1);
-            feather.Add(5);
+            Console.WriteLine("Minkälainen kärki? (puu, teräs, timantti)");
+            string tipChange = Console.ReadLine();
+            Head pää = Enum.Parse<Head>(tipChange.ToLower());
 
-            while (true)
+            Console.WriteLine("Minkälaiset sulat? (lehti, kanansulka, kotkansulka)");
+            string tailChange = Console.ReadLine();
+            Tail tail = Enum.Parse<Tail>(tailChange.ToLower());
+
+            int Price(Head head)
             {
-                Console.WriteLine("Minkälainen kärki? (puu, teräs, timantti)");
-                string change = Console.ReadLine();
-                if (change.ToLower() == "puu")
+                return head switch
                 {
-                    total += head[0];
-                    break;
-                }
-                if (change.ToLower() == "teräs")
-                {
-                    total += head[1];
-                    break;
-                }
-                if (change.ToLower() == "timantti")
-                {
-                    total += head[2];
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Did not understand");
-                }
-
+                    Head.puu => 3,
+                    Head.teräs => 5,
+                    Head.timantti => 50,
+                    _ => 0,
+                };
             }
 
-            while (true)
+            int Price2(Tail tail)
             {
-                Console.WriteLine("Minkälaiset sulat? (lehti, kanansulka, kotkansulka)");
-                string change = Console.ReadLine();
-                if (change.ToLower() == "lehti")
+                return tail switch
                 {
-                    total += feather[0];
-                    break;
-                }
-                if (change.ToLower() == "kanansulka")
-                {
-                    total += feather[1];
-                    break;
-                }
-                if (change.ToLower() == "kotkansulka")
-                {
-                    total += feather[2];
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Did not understand");
-                }
+                    Tail.lehti => 0,
+                    Tail.kanansulka => 1,
+                    Tail.kotkansulka => 5,
+                    _ => 0,
+                };
             }
+
+            total += Price(pää);
+            total += Price2(tail);
 
             while (true)
             {
                 Console.WriteLine("Kuinka pitkä varsi? (60-100)");
                 float price = Single.Parse(Console.ReadLine());
-                if (price < 101 && price >59)
+                if (price < 101 && price > 59)
                 {
                     total += price * 0.05f;
                     break;
@@ -82,8 +106,6 @@
             }
 
             Console.WriteLine($"Nuolen hinta on {total}");
-
-            
 
         }
     }
