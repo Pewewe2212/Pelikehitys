@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MkSvhozC6PH+u1bqL6Jjbe+Dv5wIzUbmNDA5a2qaHwMo+ZRQQ7LyCkc4ipAmwagx72T+KzOxi117VASN7/Mojw==",
+  "success": true,
+  "projectFilePath": "C:\\Tiedostot\\Pelikehitys\\Pelikehitys\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\s2300941\\.nuget\\packages\\raylib-cs\\7.0.0\\raylib-cs.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
