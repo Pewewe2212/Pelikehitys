@@ -21,7 +21,6 @@ namespace ConsoleApp1
 
         internal class Arrow()
         {
-            // gets head
             public byte headPuu
             {
                 get { return (byte)Head.puu; }
