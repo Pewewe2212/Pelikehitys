@@ -6,6 +6,7 @@
         {
             protected float weight;
             protected float volume;
+            protected string name;
             public virtual float Weight()
             {
                 return weight;
@@ -13,6 +14,13 @@
             public virtual float Volume()
             {
                 return volume;
+            }
+            public virtual string Name()
+            {
+                name = GetType().Name;
+                Console.WriteLine(name);
+                Console.WriteLine("");
+                return name;
             }
         }
 
@@ -109,25 +117,30 @@
             public float maxVolume = 20;
             public float currentVolume = 0;
 
+            public string contents;
+
             public bool Lisää(Stuff stuff)
             {
                 if (currentWeight + stuff.Weight() > maxWeight)
                 {
-                    Console.WriteLine("Could not fit item in backpack");
+                    Console.WriteLine("\nCould not fit item in backpack\n");
                     return false;
                 }
                 else if (currentVolume + stuff.Volume() > maxVolume)
                 {
-                    Console.WriteLine("Could not fit item in backpack");
+                    Console.WriteLine("\nCould not fit item in backpack\n");
                     return false;
                 }
                 else if (currentItems + 1 > maxItems)
                 {
-                    Console.WriteLine("Could not fit item in backpack");
+                    Console.WriteLine("\nCould not fit item in backpack\n");
                     return false;
                 }
                 else
                 {
+                    contents += stuff.Name();
+                    contents += ", ";
+                    Console.WriteLine($"Backpack contains: {contents}");
                     currentWeight += stuff.Weight();
                     currentVolume += stuff.Volume();
                     currentItems += 1;
