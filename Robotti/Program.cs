@@ -2,30 +2,30 @@
 {
     internal class Program
     {
-        public abstract class RobottiKäsky
+        public interface IRobottiKäsky
         {
-            public abstract void Suorita(Robotti robotti);
+            public void Suorita(Robotti robotti);
         }
 
-        public class Käynnistä : RobottiKäsky
+        public class Käynnistä : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 robotti.OnKäynnissä = true;
             }
         }
 
-        public class Sammuta : RobottiKäsky
+        public class Sammuta : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 robotti.OnKäynnissä = false;
             }
         }
 
-        public class YlösKäsky : RobottiKäsky
+        public class YlösKäsky : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 if (robotti.OnKäynnissä == true)
                 {
@@ -34,9 +34,9 @@
                 }
             }
         }
-        public class AlasKäsky : RobottiKäsky
+        public class AlasKäsky : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 if (robotti.OnKäynnissä == true)
                 {
@@ -45,9 +45,9 @@
                 }
             }
         }
-        public class VasenKäsky : RobottiKäsky
+        public class VasenKäsky : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 if (robotti.OnKäynnissä == true)
                 {
@@ -56,9 +56,9 @@
                 }
             }
         }
-        public class OikeaKäsky : RobottiKäsky
+        public class OikeaKäsky : IRobottiKäsky
         {
-            public override void Suorita(Robotti robotti)
+            public void Suorita(Robotti robotti)
             {
                 if (robotti.OnKäynnissä == true)
                 {
@@ -73,11 +73,11 @@
             public int X { get; set; }
             public int Y { get; set; }
             public bool OnKäynnissä { get; set; }
-            public RobottiKäsky?[] Käskyt { get; } = new RobottiKäsky?[3];
+            public IRobottiKäsky?[] Käskyt { get; } = new IRobottiKäsky?[3];
 
             public void Suorita()
             {
-                foreach (RobottiKäsky? käsky in Käskyt)
+                foreach (IRobottiKäsky? käsky in Käskyt)
                 {
                     käsky?.Suorita(this);
                     Console.WriteLine($"[{X} {Y} {OnKäynnissä}]");
